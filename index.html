@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>N & T | Happy New Year 2026</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>❤️</text></svg>">
+</head>
+<body>
+
+    <audio id="bg-music" loop>
+        <source src="assets/music.mp3" type="audio/mpeg">
+    </audio>
+
+    <nav class="navbar">
+        <div class="nav-content">
+            <div style="display: flex; align-items: center; gap: 15px;">
+                <div class="logo">N & T</div>
+                <div id="nav-timer" class="nav-timer" style="display: none;">Loading...</div>
+            </div>
+            <div class="nav-links">
+                <span class="nav-link-item active" onclick="navigateTo('home')">หน้าแรก</span>
+                <span class="nav-link-item" onclick="navigateTo('story')">นิทาน</span>
+                <span class="nav-link-item" onclick="navigateTo('feelings')">ความรู้สึก</span>
+                <span class="nav-link-item" onclick="navigateTo('newyear')">เคาท์ดาวน์</span>
+                <span class="nav-link-item" onclick="navigateTo('game')">อนาคต</span>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="page-section active">
+        <div class="hero">
+            <div class="hero-content">
+                <h1 class="hero-title">NATHEE & TECHO</h1>
+                <p>ตั้งแต่วันที่เตโชเดินเข้ามา... โลกของนทีก็เปลี่ยนไป</p>
+                
+                <div class="timer-container-decorated">
+                    <div class="decor-item tree">🎄</div>
+                    <div class="timer-box snow-capped-box">
+                        <p>เรารักกันมาแล้ว</p>
+                        <div id="counter" class="timer-text">Loading...</div>
+                    </div>
+                    <div class="decor-item snowman">⛄</div>
+                </div>
+                
+                <div style="position: relative; display: inline-block; margin-top: 30px;">
+                     <div class="decor-item candy-cane" style="left: -40px; top: 10px;">🍭</div>
+                     <div class="decor-item gift-box" style="right: -40px; top: 10px;">🎁</div>
+                    <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+                        <button class="ice-btn" onclick="startJourney()">
+                            <span class="ice-cap-syrup"></span> เปิดอ่านนิทาน ❤️
+                        </button>
+                        <button class="ice-btn new-year-link" onclick="navigateTo('newyear')">
+                            <span class="ice-cap-syrup"></span> เคาท์ดาวน์ปีใหม่ 🎉
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="story" class="page-section">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 2rem;">
+                <h1 style="font-size: 2.5rem;">The Tale of Us</h1>
+                <p style="color: #888;">กาลครั้งหนึ่งนานมาแล้ว...</p>
+            </div>
+            
+            <div class="envelope-wrapper" onclick="openStoryLetter()">
+                <div id="envelope" class="envelope">
+                    <div class="front flap"></div>
+                    <div class="front pocket"></div>
+                    <div class="letter"><div class="text" style="margin-top: 30px; color: #ff9eaa;">❤️<br>For You</div></div>
+                </div>
+                <p class="click-hint">👇 กดที่ซองจดหมายเพื่อเปิดอ่าน 👇</p>
+            </div>
+
+            <div class="story-card">
+                <div class="chapter-title">Chapter 1</div>
+                <h3>การพบกันของโชคชะตา 🎓</h3>
+                <span class="story-date">18 มีนาคม 2568</span>
+                <img src="assets/images/story-1.jpg" alt="First Meet" class="story-img">
+                <p style="text-align: left;">วันสอบสัมภาษณ์... สายตาของนทีได้ไปสะดุดกับคนคนนึง วินาทีนั้นเหมือนโลกหยุดหมุน...</p>
+            </div>
+            <div class="timeline-connector"></div>
+
+            <div class="story-card">
+                <div class="chapter-title">Chapter 2</div>
+                <h3>ข้อความแรกที่ส่งถึงกัน 💬</h3>
+                <span class="story-date">The Beginning</span>
+                <img src="assets/images/story-2.jpg" alt="Chatting" class="story-img">
+                <p style="text-align: left;">จากคนแปลกหน้า กลายเป็นคนคุ้นเคย... เสียงไลน์จากเตโชคือเสียงที่รอคอยที่สุด</p>
+            </div>
+            <div class="timeline-connector"></div>
+
+            <div class="story-card">
+                <div class="chapter-title">Chapter 3</div>
+                <h3>พื้นที่ปลอดภัย 🏠</h3>
+                <span class="story-date">Comfort Zone</span>
+                <img src="assets/images/story-3.jpg" alt="Comfort Zone" class="story-img">
+                <p style="text-align: left;">โลกภายนอกอาจจะใจร้าย แต่เตโชคือที่พักใจของนทีเสมอ...</p>
+            </div>
+            <div class="timeline-connector"></div>
+
+            <div class="story-card">
+                <div class="chapter-title">Chapter 4</div>
+                <h3>คำสัญญาของสองเรา ❤️</h3>
+                <span class="story-date">05 พฤศจิกายน 2568</span>
+                <img src="assets/images/photo1.jpg" alt="Anniversary" class="story-img">
+                <p style="text-align: left;">และแล้วเราก็ตกลงเป็นแฟนกัน... ขอบคุณที่เลือกนทีนะครับ</p>
+            </div>
+            <div class="timeline-connector"></div>
+
+            <div class="story-card">
+                <div class="chapter-title">To Be Continued...</div>
+                <h3>จับมือเดินต่อไปนะ ♾️</h3>
+                <img src="assets/images/story-4.jpg" alt="Forever" class="story-img">
+                <p style="text-align: left;">นิทานเรื่องนี้ยังไม่จบ... เพราะเราจะเขียนบทต่อไปด้วยกัน</p>
+            </div>
+
+            <div style="width: 100%; margin-top: 4rem;">
+                <h2 style="text-align: center; color: var(--pink-main); margin-bottom: 20px;">Open When...</h2>
+                <div class="open-when-item" onclick="openModal('💌 เปิดเมื่อคิดถึง', 'ถ้าความคิดถึงมันส่งเสียงได้...\nเตโชคงหูอื้อไปหมดแล้วนะตอนนี้\n\nคิดถึงนะครับ ❤️')"><h3>💌 เปิดเมื่อคิดถึง</h3><span>👉</span></div>
+                <div class="open-when-item" onclick="openModal('🔋 เปิดเมื่อเหนื่อย', 'คนเก่งของนที... พักผ่อนนะครับ\nนทีภูมิใจในตัวเตโชที่สุดเลย 🫂')"><h3>🔋 เปิดเมื่อเหนื่อย</h3><span>👉</span></div>
+                <div class="open-when-item" onclick="openModal('🏳️ เปิดเมื่อโกรธกัน', 'นทียอมแพ้แล้วครับ... ดีกันนะ 🥺🍕')"><h3>🏳️ เปิดเมื่อโกรธกัน</h3><span>👉</span></div>
+                 <div class="open-when-item" onclick="openModal('📅 เปิดเมื่อวันครบรอบ', 'สุขสันต์วันครบรอบนะครับ! รักนะครับคุณแฟน 👵👴')"><h3>📅 เปิดเมื่อวันครบรอบ</h3><span>👉</span></div>
+            </div>
+
+            <button class="next-page-btn" onclick="navigateTo('feelings')">ไปบทถัดไป (ความรู้สึก) 👉</button>
+        </div>
+    </section>
+
+    <section id="feelings" class="page-section">
+        <div class="container">
+            <h1>วันนี้เตโชรู้สึกยังไง?</h1>
+            <p>กดบอกนทีได้เลยนะ พร้อมรับฟังเสมอ</p>
+            <div class="mood-grid">
+                <div class="mood-btn" data-msg="นทีขอโทษจริงๆ นะครับ 🥺\nดีกันนะคนเก่ง ❤️"><span class="mood-icon">😠</span> โกรธ</div>
+                <div class="mood-btn" data-msg="พักผ่อนนะครับ\nนทีนวดไหล่ให้นะ ✌️"><span class="mood-icon">😔</span> เหนื่อย</div>
+                <div class="mood-btn" data-msg="คิดถึงมากๆ\nคืนนี้วิดีโอคอลกันนะ ❤️"><span class="mood-icon">💗</span> คิดถึง</div>
+                <div class="mood-btn" data-msg="เชื่อใจนทีนะ นทีรักเตโชที่สุด 🤍"><span class="mood-icon">🤍</span> ไม่มั่นใจ</div>
+                <div class="mood-btn" data-msg="กินยา แล้วนอนพักผ่อนเยอะๆ นะ 😷💊"><span class="mood-icon">😷</span> ไม่สบาย</div>
+                <div class="mood-btn" data-msg="นทีมีแค่เตโชคนเดียวครับ 🔐"><span class="mood-icon">😤</span> หึง/น้อยใจ</div>
+                <div class="mood-btn" data-msg="ยิ้มเยอะๆ นะครับคนเก่ง 😊✨"><span class="mood-icon">🥰</span> มีความสุข</div>
+                <div class="mood-btn" data-msg="มากอดกัน! 🤗"><span class="mood-icon">🤗</span> ขอกอด</div>
+            </div>
+            <button class="next-page-btn" onclick="navigateTo('game')">มาเล่นเกมกันเถอะ 🎮</button>
+        </div>
+    </section>
+
+    <section id="game" class="page-section">
+        <div class="container" style="justify-content: center; height: 80vh;">
+            <h1>🔒 ป้อนรหัสลับ</h1>
+            <p>รหัสคือ "วันครบรอบของเรา" (ตัวเลข 6 หลัก)</p>
+            <div class="game-box">
+                <span style="font-size: 3rem;">🔐</span><br>
+                <input type="password" id="pass-input" class="password-input" placeholder="ddmmyy" maxlength="6">
+                <button class="btn-primary" onclick="checkPassword()">ปลดล็อค 🔓</button>
+                <p id="error-msg" style="color: red; margin-top: 10px; opacity: 0; font-family: var(--font-body);">รหัสผิดครับ! 😠</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="mini-game" class="page-section">
+        <div class="container" style="justify-content: center; min-height: 80vh;">
+            <div style="text-align: center; margin-bottom: 2rem;">
+                <h1 style="color: var(--pink-main); font-size: 2.5rem;">Mission 1</h1>
+                <h2>ภารกิจ: รักนทีแค่ไหน? ❤️</h2>
+                <p>เลือกคำตอบที่ถูกต้องเพื่อไปต่อนะ!</p>
+            </div>
+            <div class="mood-grid" style="max-width: 500px;">
+                <div class="mood-btn" onclick="checkLoveLevel(10)"><span class="mood-icon">🤏</span> 10%</div>
+                <div class="mood-btn" onclick="checkLoveLevel(50)"><span class="mood-icon">😐</span> 50%</div>
+                <div class="mood-btn" onclick="checkLoveLevel(100)" style="border-color: var(--pink-main);"><span class="mood-icon">💖</span> 100%</div>
+                <div class="mood-btn" onclick="checkLoveLevel(3000)" style="border-color: var(--pink-main);"><span class="mood-icon">🚀</span> 3000%</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="clicker-game" class="page-section">
+        <div class="container" style="justify-content: center; min-height: 80vh;">
+            <div style="text-align: center; margin-bottom: 1rem;">
+                <h1 style="color: var(--pink-main);">Mission 2</h1>
+                <h2>ภารกิจ: เติมใจให้นที ❤️</h2>
+                <p>กดที่หัวใจย้ำๆ จนกว่านทีจะยิ้มนะ!</p>
+            </div>
+            <div class="progress-track">
+                <div class="progress-fill" id="heart-bar"></div>
+                <div class="marker-point" style="left: 20%;"><img src="assets/images/nathee-sad.jpg" id="img-20" class="marker-img hidden"><span class="marker-label">20%</span></div>
+                <div class="marker-point" style="left: 50%;"><img src="assets/images/nathee-ok.jpg" id="img-50" class="marker-img hidden"><span class="marker-label">50%</span></div>
+                <div class="marker-point" style="left: 95%;"><img src="assets/images/nathee-happy.jpg" id="img-100" class="marker-img hidden"><span class="marker-label">100%</span></div>
+            </div>
+            <button class="big-heart-btn" onclick="clickHeartAction()">
+                <div class="heart-pulse">❤️</div><span style="font-size: 1.5rem; font-weight: bold; color: white;">รักนที</span>
+            </button>
+            <p id="click-count" style="margin-top: 20px; font-size: 1.2rem; color: var(--pink-main);">0%</p>
+        </div>
+    </section>
+
+    <section id="maze-game" class="page-section">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 1rem;">
+                <h1 style="color: var(--pink-main);">Mission 3</h1>
+                <h2>ภารกิจ: พานทีไปหาเตโช 🏃‍♂️💨</h2>
+                <p>กดปุ่มลูกศร พานทีเดินไปหาเตโชให้หน่อย!</p>
+            </div>
+            <div class="maze-container">
+                <div id="maze-grid" class="maze-grid"></div>
+            </div>
+            <div class="controls">
+                <div></div><button class="control-btn" onclick="movePlayer(0, -1)">⬆️</button><div></div>
+                <button class="control-btn" onclick="movePlayer(-1, 0)">⬅️</button>
+                <button class="control-btn" onclick="movePlayer(0, 1)">⬇️</button>
+                <button class="control-btn" onclick="movePlayer(1, 0)">➡️</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="future" class="page-section">
+        <div class="space-theme">
+            <div class="space-content">
+                <h1>Coming Soon</h1>
+                <p>เรื่องราวของเรายังอีกยาวไกล... เดินไปด้วยกันนะ 🚀</p>
+                <br><button class="btn-primary" onclick="navigateTo('home')">กลับหน้าแรก</button>
+            </div>
+            <canvas id="space-canvas"></canvas>
+        </div>
+    </section>
+
+    <section id="newyear" class="page-section">
+        <div class="fireworks-theme">
+            <canvas id="fireworks-canvas"></canvas>
+            
+            <div class="container" style="z-index: 10; padding-top: 80px; padding-bottom: 100px;">
+                
+                <div style="text-align: center; color: white; margin-bottom: 3rem; text-shadow: 0 0 10px #000;">
+                    <h1 style="font-size: 3rem; color: #FFD700;">Year in Review</h1>
+                    <p>ทบทวนความทรงจำ... ก่อนก้าวสู่ปีใหม่</p>
+                </div>
+
+                <div class="newyear-card">
+                    <h3>จุดเริ่มต้น 📅</h3>
+                    <p>
+                        นทีไม่เคยลืมวันแรกที่เราเจอกันเลยนะ<br>
+                        ตอนนั้นยังไม่ค่อยรู้จักกัน<br>
+                        แต่ตอนนี้เราเป็นคนรู้ใจกันแล้ว<br>
+                        ปีนี้ดีมากเพราะมีเตโชเลยนะงับบบ ❤️
+                    </p>
+                </div>
+                <div class="timeline-connector" style="background-image: radial-gradient(circle, #FFD700 30%, transparent 40%);"></div>
+<div class="newyear-card">
+                    <h3>อยากขอบคุณ </h3>
+                    <p>
+                        ขอบคุณที่ให้อภัยนทีตลอดเลยนะ<br>
+                        ขอบคุณที่ไม่เคยปล่อยมือเลย<br>
+                        รักเตโชมากๆๆเลยนะ<br>
+                        นทีมีเตโชตนเดียว และเตโชตลอดไป
+                    </p>
+                </div>
+                <div class="timeline-connector" style="background-image: radial-gradient(circle, #FFD700 30%, transparent 40%);"></div>
+                <div class="newyear-card">
+                    <h3>ระหว่างทาง 🛣️</h3>
+                    <p>
+                        ผ่านอะไรมาจนถึงสิ้นปี... ผ่านมาเยอะเลยนะ<br>
+                        ไม่ว่าจะมีความสุข หัวเราะ<br>
+                        ร้องไห้บ้าง งอนกันบ้าง<br>
+                        แต่ขอบคุณเตโช ที่ไม่เคยปล่อยมือนทีเลยน้าา 🤝
+                    </p>
+                </div>
+                <div class="timeline-connector" style="background-image: radial-gradient(circle, #FFD700 30%, transparent 40%);"></div>
+
+                <div class="newyear-card"><h3>คืนข้ามปี 🎆</h3><p>และแล้วก็มาถึงวินาทีสำคัญ...<br>พร้อมจะเดินไปสู่บทต่อไปของชีวิตหรือยังงับบอ้วนน</p></div>
+
+                <div style="margin-top: 3rem; text-align: center;">
+                    <p style="color: white; margin-bottom: 10px;">👇 ถ้าพร้อมแล้ว... กดปุ่มด้านล่าง 👇</p>
+                    <button class="ice-btn new-year-link" onclick="showNewYearGame()" style="width: auto; padding: 15px 30px;">
+                        <span class="ice-cap-syrup"></span>
+                        พร้อมแล้ว! ลุยเลย 🚀
+                    </button>
+                </div>
+
+                <div id="newyear-game-area" class="drag-game-area icy-game-area" style="display: none; margin-top: 50px;">
+                    <h3 style="color: white; margin-bottom: 20px; text-shadow: 0 0 5px #000;">ภารกิจ: จับมือข้ามปีไปด้วยกัน ❤️</h3>
+                    <div class="slider-wrapper">
+                        <div class="slider-year left">2025</div>
+                        <div id="slider-track" class="slider-track">
+                            <div id="slider-handle" class="slider-handle">
+                                <div class="couple-circle-inner">
+                                    <img src="assets/images/nathee-happy.jpg" class="c-img-left">
+                                    <img src="assets/images/photo1.jpg" class="c-img-right">
+                                </div>
+                            </div>
+                            <div class="slider-text">เลื่อนไปทางขวา >>></div>
+                        </div>
+                        <div class="slider-year right">2026</div>
+                    </div>
+                    <button class="btn-primary" onclick="forceNextPage()" style="margin-top: 30px; font-size: 0.9rem; padding: 10px 20px; opacity: 0.8;">
+                        ข้ามไปฉลองปีใหม่เลย ⏩
+                    </button>
+                </div>
+
+                <button class="btn-primary" onclick="navigateTo('home')" style="margin-top: 50px;">กลับหน้าแรก 🏠</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="happy-new-year" class="page-section">
+        <div class="fireworks-theme">
+            <canvas id="heart-fireworks-canvas"></canvas>
+            <div class="space-content" style="z-index: 10; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 80vh; padding-bottom: 50px;">
+                
+                <h1 style="font-size: 4rem; color: #FF69B4; text-shadow: 4px 4px 0 #000, 0 0 30px #FF69B4, 0 0 10px white; text-align: center; line-height: 1.2;">Happy New Year! 💖</h1>
+                <p style="font-size: 1.5rem; color: white; text-shadow: 2px 2px 4px #000; margin-bottom: 30px;">เริ่มต้นปีใหม่ไปด้วยกันนะ...</p>
+                
+                <div class="envelope-wrapper" id="hny-envelope-wrapper" onclick="openNewYearLetter()">
+                    <div id="envelope-hny" class="envelope" style="background-color: #FFD700;">
+                        <div class="front flap" style="border-top-color: #FFC107;"></div>
+                        <div class="front pocket" style="border-left-color: #FFD700; border-right-color: #FFD700; border-bottom-color: #FFB300;"></div>
+                        <div class="letter">
+                            <div class="text" style="margin-top: 30px; color: #d4af37;">✨<br>HNY 2026</div>
+                        </div>
+                    </div>
+                    <p class="click-hint" style="color: white; text-shadow: 0 0 5px black;">👇 กดรับคำอวยพรจากนที 👇</p>
+                </div>
+
+                <div id="video-container" class="tiktok-container" style="display: none;">
+                    <div class="phone-frame">
+                        <video id="my-video" controls>
+                            <source src="assets/video.mp4" type="video/mp4">
+                            Browser ไม่รองรับวิดีโอครับ
+                        </video>
+                        <div class="floating-heart-vid h1">❤️</div>
+                        <div class="floating-heart-vid h2">💖</div>
+                    </div>
+
+                    <button class="vid-heart-btn" onclick="showLoveMessage()">
+                        ❤️ กดเค้าหน่อย
+                    </button>
+
+                    <h3 style="color: #FFD700; text-shadow: 0 0 5px #000; margin-top: 10px;">🎥 ของขวัญอีกหนึ่งชิ้น</h3>
+                </div>
+
+                <br>
+                <button class="btn-primary" onclick="navigateTo('home')">กลับหน้าแรก</button>
+            </div>
+        </div>
+    </section>
+
+    <div class="modal-overlay" id="modal">
+        <div class="modal-box">
+            <h3 id="modal-title" class="modal-title">...</h3>
+            <p id="modal-content" class="modal-content">...</p>
+            <button class="btn-primary" id="close-modal">รับทราบครับ ❤️</button>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
